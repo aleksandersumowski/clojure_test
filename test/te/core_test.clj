@@ -1,7 +1,9 @@
-(ns te.core-test
-  (:require [clojure.test :refer :all]
-            [te.core :refer :all]))
+(ns te.t-core
+    (:use midje.sweet)
+    (:require  [te.core :as core]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(fact "Sample test"
+        (str/split "a/b/c" #"/") =>  ["a" "b" "c"]
+       )
+
+
